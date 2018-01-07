@@ -49,13 +49,15 @@ img{
 /* Pantalla con ancho máximo de 880 pixeles */
 @media screen and (max-width: 880px) {
   .container-background{    /*Se cambia la imagen de fondo de día, por la imagen de noche*/
-    height: 720px;
+    /* height: 100px; */
     background-image: url("../assets/images/night.jpg");
     background-repeat: no-repeat;
     max-width: 100%;
+    min-height: 300px;
+    min-width: 120px;
     background-position: center;
     background-size: cover;
-    padding-top:155px;
+    padding-top:56px;
   }
    #cat-small{    /*Se hace visible el gato pequeño*/
     visibility: visible;
