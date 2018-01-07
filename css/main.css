@@ -1,0 +1,95 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+/* Ajusta la imagen al contenedor */
+img{
+  width: 100%;
+  height: auto;
+
+}
+
+[class*="col-"] {
+  min-height: 50px;
+  /* background-color: blue; */
+}
+
+.container{
+  width: 100%;
+  margin: 0 auto;
+}
+/* Contenedor del primer fondo - imagen día */
+.container-background{
+  max-width: 100%;
+  height: auto;
+  background-image: url("../assets/images/sunny-day.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
+
+/* Modificando propiedades de gato grande */
+#cat-big{
+  visibility: hidden;
+}
+/* Modificando propiedades de gato pequeño */
+#cat-small{
+  height: auto;
+  width: 300%;
+  visibility: hidden;
+}
+/* Modificando propiedades de gato mediano */
+#cat-med{
+  height: auto;
+  width: 212%;
+}
+
+/* Pantalla con ancho máximo de 880 pixeles */
+@media screen and (max-width: 880px) {
+  .container-background{    /*Se cambia la imagen de fondo de día, por la imagen de noche*/
+    height: 720px;
+    background-image: url("../assets/images/night.jpg");
+    background-repeat: no-repeat;
+    max-width: 100%;
+    background-position: center;
+    background-size: cover;
+    padding-top:180px;
+  }
+   #cat-small{    /*Se hace visible el gato pequeño*/
+    visibility: visible;
+  }
+
+  #cat-big{       /*Se oculta el gato grande*/
+    visibility: hidden;
+  }
+  .hidden-row-1, .hidden-row-2{ /*Se ocultan filas*/
+    display: none;
+  }
+}
+
+@media screen and (max-width: 568px) {
+
+  .container-background{    /*Se cambia la imagen de fondo de noche, por la imagen de tarde*/
+    height: 506px;
+    background-image: url("../assets/images/dawn.png");
+    background-repeat: no-repeat;
+    max-width: 100%;
+    height: auto;
+    background-position: center;
+    background-size: cover;
+  }
+
+  #cat-small{     /*Se oculta gato pequeño*/
+    visibility: hidden;
+  }
+
+  #cat-big{       /*Se hace visible el gato grande*/
+    visibility: visible;
+  }
+
+  .hidden-row-1{  /*Se ocultan filas*/
+    display: none;
+  }
+}
